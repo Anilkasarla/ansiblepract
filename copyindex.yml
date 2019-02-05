@@ -1,0 +1,10 @@
+---
+ - hosts: webserver
+   tasks: 
+    - name: copy index file
+      copy: src=/home/ansadm/ansiblepract/index.html dest=/usr/share/nginx/html/
+
+ - hosts: webserver
+   tasks:
+    - name: restart nginx
+      service: name=nginx state=restarted

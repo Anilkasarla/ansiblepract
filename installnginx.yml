@@ -1,0 +1,5 @@
+---
+ - hosts: webserver
+   tasks:
+     - name: Install Nginx
+       apt: pkg=nginx state=installed update_cache=false
